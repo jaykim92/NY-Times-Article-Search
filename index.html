@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New York Times Search</title>
+
+    <!-- linked bootstrap for Styling-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+  
+</head>
+<body>
+    <!-- creating containes, and boxes for Form -->
+    <!-- Main Bootstrap Search -->
+    <div class="container">
+
+        <!-- JUMBO TITLE -->
+        <div class="jumbotron" style="background-color:#5771AE  ; color: white;">
+            <h1 class="text-center"><strong><i class="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="row">
+            <!-- column 1 -->
+            <div class="col-md-12">
+                <!-- Panel created for search Parameters -->
+                <div class="panel panel-primary">
+                    <div class=" panel-heading" style= "background-color: #56627F;" >
+                        <h3 class="panel-title"><strong><i class="fa  fa-list-alt "></i> Search Parameters</strong></h3>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <!-- start of form -->
+                        <form role="form">
+
+                            <!-- first line of form for search term -->
+                            <div class="form-group">
+                                <label for="term">Search Term: </label>
+                                <input type="text" class="form-control" id="search-term">
+                            </div>
+
+                            <!-- second line of form for number of records user would like to retrieve -->
+                            <div class="form-group" >
+                                <label for="records">Number of Records to Retrieve: </label>
+                                <!-- form allowing user to select from a list of amts up to 5 -->
+                                <select class="form-control" id="num-records-select">
+                                    <option value="1"> 1 </option>
+                                    <option value="2"> 2 </option>
+                                    <option value="3"> 3 </option>
+                                    <option value="4"> 4 </option>
+                                    <option value="5"> 5 </option>
+                                </select>
+                            </div>
+
+                            <!-- third line of form for Start Year -->
+                            <div class="form-group">
+                                <label for="start-year"> Start Year (Optional): </label>
+                                <input type="text" class="form-control" id="start-year">
+                            </div>
+
+                            <!-- fourth line  of form  for End Year-->
+                            <div class="form-group">
+                                <label for="end-year"> End Year (Optional): </label>
+                                <input type="text" class="form-control" id="end-year">
+                            </div>
+
+                            <!-- Created a button so user can submit their wanted search -->
+                            <button type="submit" class="btn btn-default" id="run-search"><i class="fa fa-search"></i> Search</button>
+                            <!-- a button to clear the search input -->
+                            <button type="button" class="btn btn-default" id="clear-all"><i class="fa fa-trash"></i> Clear Results</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF FIRST ROW (SEARCH PANEL) -->
+
+        <!-- a second row is created for the Top Article Section -->
+        <div class="row">
+          <div class="col-md-12">
+            
+          <div class=" panel panel-primary">
+
+            <!-- PANEL TITLE -->
+            <div class="panel-heading" style= "background-color: #56627F;">
+              <h3 class="panel-title"><strong><i class="fa fa-table"></i>   Top Articles</strong></h3>
+            </div>
+
+            <!-- A panel to hold to the search results / articles found based on user input -->
+            <div class="panel-body" id="well-section"></div>
+          </div>
+          
+          </div>
+        </div>
+        <!-- END OF SECOND ROW (ARTICLE PANEL) -->
+    </div>
+
+<!-- NOTE I HAVE NOT CREATED A JS FILE YET -->
+<script src="script.js"></script>
+</body>
+</html>
